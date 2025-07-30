@@ -4,8 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import logo from '@/public/logo.jpeg';
-import { useState } from "react";
+import logo from "@/public/logo.jpeg";
+import { useEffect, useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
 const tabs = [
   { name: "Home", href: "/" },
@@ -21,15 +21,31 @@ const tabs = [
 ];
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
-  const pathname = usePathname(); 
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <nav className="bg-[#eee] shadow-sm fixed top-0 left-0 right-0 z-50">
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 bg-white/30 backdrop-blur transition-all duration-300 shadow-sm ${
+        scrolled ? "backdrop-blur-md" : "backdrop-blur-none"
+      }`}
+    >
       <div className="mx-auto px-6 py-3 flex items-center justify-between">
         <Link href="/" className="text-xl font-bold text-gray-900">
           <img src={logo.src} alt="Logo" className="h-12 w-auto" />
         </Link>
+
+        {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-4">
           {tabs.map((tab) => {
             const isActive = pathname === tab.href;
@@ -37,10 +53,10 @@ export default function Navbar() {
               <Link
                 key={tab.name}
                 href={tab.href}
-                className={`transition  ${
+                className={`transition ${
                   isActive
                     ? "text-[#af0c0d] font-semibold"
-                    : "text-gray-700 hover:text-[#af0c0d]"
+                    : "text-gray-900 hover:text-[#af0c0d]"
                 }`}
               >
                 {tab.name}
@@ -48,11 +64,13 @@ export default function Navbar() {
             );
           })}
           <Link href="/contact">
-            <Button className="bg-main cursor-pointer hover:bg-[#901010] text-white font-semibold p-4  rounded">
-              Gratis  Offerte
+            <Button className="bg-main cursor-pointer hover:bg-[#901010] text-white font-semibold p-4 rounded">
+              Gratis Offerte
             </Button>
           </Link>
         </div>
+
+        {/* Mobile Menu */}
         <div className="md:hidden">
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
@@ -60,7 +78,11 @@ export default function Navbar() {
                 variant="ghost"
                 className="text-gray-700 hover:text-black p-0 outline-none focus:outline-none cursor-pointer"
               >
-                {open ? <HiX className="w-8 h-8" /> : <HiMenu className="w-8 h-8" />}
+                {open ? (
+                  <HiX className="w-8 h-8" />
+                ) : (
+                  <HiMenu className="w-8 h-8" />
+                )}
               </Button>
             </SheetTrigger>
             <SheetContent side="left" className="w-64 bg-white p-4">
