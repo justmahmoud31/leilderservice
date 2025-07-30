@@ -1,0 +1,26 @@
+@import "tailwindcss";
+/* :root {
+  --primary-color: #af0c0d;
+  --secondary-color: #f59e0b;
+  --background-color: #f3f4f6;
+  --text-color: #111827;
+  --border-color: #e5e7eb;
+} */
+@theme {
+  --color-main: #af0c0d;
+  --color-secondary: #f9f9f9;
+}
+.swiper-pagination-bullet {
+  background-color: #d1d5db; /* Tailwind's gray-300 */
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #dc2626; /* Tailwind's red-600 */
+  width: 12px;
+  height: 12px;
+}
+body {
+  font-family: poppins, sans-serif;
+}
