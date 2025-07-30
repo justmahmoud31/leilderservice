@@ -1,4 +1,4 @@
-import TruckRatesTable from "@/components/Sections/TruckRatesTable";
+import FadeIn from "@/components/Shared/FadeIn";
 import { Card, CardContent } from "@/components/ui/card";
 import header from "@/public/header.webp";
 import img2 from "@/public/price2.png";
@@ -7,7 +7,6 @@ import img4 from "@/public/price4.png";
 import Link from "next/link";
 import { FaUsers } from "react-icons/fa";
 import FeaturesGrid from "../../components/Sections/FeatruesGrid";
-import FadeIn from "@/components/Shared/FadeIn";
 function page() {
   const packs = [
     {
