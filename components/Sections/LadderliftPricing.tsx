@@ -6,8 +6,8 @@ import Link from "next/link";
 import pic from "@/public/price.png";
 function LadderliftPricing() {
   const ladderliftLevels = [
-    { from: 1, to: 5, price: 90 },
-    { from: 1, to: 6, price: 100 },
+    { from: 1, to: 5, price: 100 },
+    { from: 1, to: 6, price: 110 },
     { from: 1, to: 7, price: 120 },
     { from: 1, to: 8, price: 130 },
     { from: 1, to: 9, price: 140 },
@@ -50,9 +50,8 @@ function LadderliftPricing() {
               <ul className="mt-4 text-sm text-gray-600 space-y-2 text-center">
                 <li>Ladderlift inbegrepen</li>
                 <li>Bediener inbegrepen</li>
-                <li>Extra half uur: +€30</li>
               </ul>
-
+              <p className="text-red-600 font-semibold">Prijzen zijn exclusief belastingen</p>
               <Link
                 href="/contact"
                 className="mt-6 p-2 rounded-md text-center w-full bg-main hover:bg-red-700 text-white"

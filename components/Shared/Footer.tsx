@@ -21,7 +21,7 @@ export default function Footer() {
           </h3>
           <ul className="space-y-3 text-sm">
             <li className="flex items-start gap-2">
-              <FaMapMarkerAlt /> Grotebaan24 2660 Antwerpen
+              <FaMapMarkerAlt /> De Merodelei 19, 2300 Turnhout
             </li>
             <li className="flex items-start gap-2">
               <FaWhatsapp /> +0465 500 015

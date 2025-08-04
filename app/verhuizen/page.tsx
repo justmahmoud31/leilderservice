@@ -10,7 +10,7 @@ import FeaturesGrid from "../../components/Sections/FeatruesGrid";
 function page() {
   const packs = [
     {
-      price: "€450,00",
+      price: "€550,00",
       duration: "3 uur",
       label: "PROMOPACK voor",
       features: ["tot 5de Verdieping", "Ladderlift", "Allen Bestelwagen"],
@@ -18,7 +18,7 @@ function page() {
       people: null,
     },
     {
-      price: "€550,00",
+      price: "€650,00",
       duration: "3 uur",
       label: "PROMOPACK voor",
       features: [
@@ -31,7 +31,7 @@ function page() {
       people: <FaUsers className="w-6 h-6" />,
     },
     {
-      price: "€650,00",
+      price: "€750,00",
       duration: "3 uur",
       label: "PROMOPACK voor",
       features: [
@@ -42,23 +42,7 @@ function page() {
       ],
       icon: img4.src,
       people: <FaUsers className="w-6 h-6" />,
-    },
-    {
-      price: "€120,00",
-      duration: "uur",
-      label: "6e - 7e Verdieping",
-      features: ["Ladderlift", "Bestelwagen"],
-      icon: img3.src,
-      people: null,
-    },
-    {
-      price: "€135,00",
-      duration: "uur",
-      label: "8e - 10e Verdieping",
-      features: ["Ladderlift", "Bestelwagen"],
-      icon: img3.src,
-      people: null,
-    },
+    }
   ];
   return (
     <div>
@@ -170,6 +154,8 @@ function page() {
           </FadeIn>
         ))}
       </div>
+        <p className="text-red-600 text-center font-semibold mt-2">Hoe hoger de verdieping, hoe hoger de prijs. Prijzen zijn exclusief belastingen.</p>
+
       {/* <TruckRatesTable /> */}
       <FadeIn direction="up">
         <FeaturesGrid />
