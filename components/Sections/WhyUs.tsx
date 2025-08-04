@@ -39,7 +39,7 @@ function WhyUs() {
 
         <p className="text-gray-600 text-base leading-relaxed">
           Dit feit brengt winst alleen voor u – onze klanten. Wij bieden onze
-          ladderlift diensten in groot Antwerpen, dus aarzel niet en neem contact
+          ladderlift diensten in groot Turnhout, dus aarzel niet en neem contact
           met ons op als u interesse hebt.
         </p>
 

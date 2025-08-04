@@ -24,7 +24,7 @@ const services = [
   {
     icon: image4.src,
     title: "Service bij iedere services",
-    description: "Neem contact met ons op als u interesse hebt. Wij bieden onze ladderlift diensten in groot Antwerpen, dus aarzel niet!",
+    description: "Neem contact met ons op als u interesse hebt. Wij bieden onze ladderlift diensten in groot Turnhout, dus aarzel niet!",
   },
 ];
 

@@ -30,7 +30,7 @@ export default function Home() {
       >
         <div className="flex flex-col justify-center items-center gap-4 transition-transform duration-300 ease-in-out hover:scale-104 cursor-pointer filter backdrop-blur-sm bg-white/20 p-8 rounded-lg shadow-lg">
           <h2 className="text-main lg:text-3xl text-xl font-bold text-center">
-            Lieder Service verhuisbedrijf & ladderlift in Antwerpen
+            Lieder Service verhuisbedrijf & ladderlift in Turnhout
           </h2>
           <h1 className="text-white lg:text-4xl text-2xl font-bold">
             Snel, veilig en betrouwbaar verhuizen

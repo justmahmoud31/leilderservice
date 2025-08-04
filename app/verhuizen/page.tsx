@@ -100,8 +100,8 @@ function page() {
           </p>
           <h2>Deze tarieven gelden enkel voor:</h2>
           <p className="text-gray-600">
-            <span className="text-red-600">Groot-Antwerpen:</span>
-            Antwerpen, Berchem, Borgerhout, Borsbeek, Deurne, Ekeren, Hoboken,
+            <span className="text-red-600">Groot-Turnhout:</span>
+            Turnhout, Berchem, Borgerhout, Borsbeek, Deurne, Ekeren, Hoboken,
             Merksem, Mortsel, Schoten, Wijnegem, Wilrijk, Wommelgem
           </p>
           <p className="text-gray-600">

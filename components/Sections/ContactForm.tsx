@@ -206,7 +206,7 @@ export default function ContactForm() {
       {/* Map */}
       <div className="pt-6">
         <iframe
-          src="https://www.google.com/maps?q=Grotebaan+24,+2660+Antwerpen,+Belgium&output=embed"
+          src="https://www.google.com/maps?q=De+Merodelei+19,+2300+Turnhout&output=embed"
           width="100%"
           height="450"
           frameBorder="0"
